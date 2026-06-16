@@ -23,7 +23,7 @@ Fine-tuned MACE models for polymorphic molecular crystals, trained using the [AM
 
 - **Foundation Model**: MACE-MH1 (`mace-mh-1-omol-1%`)
 - **Reference Data**: DFT (PBE-D4) optimizations + AIMD trajectories (25-500K)
-- **DFT Settings**: VASP, 750 eV cutoff, EDIFF = 10⁻⁷ eV
+- **DFT Settings**: VASP, 650 eV cutoff, EDIFF = 10⁻⁷ eV
 
 **Two-stage training:**
 1. Initial: LR = 2×10⁻³, energy weight = 100, force weight = 10
@@ -35,7 +35,6 @@ Early stopping with patience = 75 epochs. All models trained in float64.
 
 All models validated for:
 - **Energy conservation**: NVE drift < 10⁻⁵ over 25 ps
-- **Thermal stability**: NVT stable up to 600K
 - **Structural integrity**: RDFs and P₂ order parameters preserved
 
 ## Usage
